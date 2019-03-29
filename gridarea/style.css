@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+html, body,h3 {
+	padding: 0;
+	margin: 0;
+	font-family: Arimo;
+}
+header {
+	padding: 2em;
+	margin-bottom: 2px;
+}
+
+header,aside  {
+	background-color:rgba(0,0,51,0.2);
+	
+}
+h1, h3 {
+	font-family: 'Arimo'
+}
+h1, .tagline {color: white;}
+
+section {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	padding-bottom: .2em;
+}
+article {
+	padding: 1em;
+}
+section img {
+	max-width: 100%;
+}
+
+.nummer {
+	background-color: #FF6600;
+	color: #fff;
+	width: 1.2em;
+	font-size: 3em;
+	text-align: right;
+	padding:.2em;
+}
+aside {
+	margin-right: 2px;
+}
+aside ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+aside h3 {
+	background-color: #FF6600;
+	padding: 2em;
+	color: #fff;
+
+}
+
+aside a {
+	text-decoration: none;
+	padding: 2em;
+	display: block;
+	color: white;
+}
+
+aside a:hover {
+	background-color: red;
+	color: #fff;
+}
+
+footer {
+	background-color: #333;
+	color: #eee;
+	padding: 2em;
+}
+
+@media screen and (min-width: 760px) {
+
+	.afb {
+		display: block;
+		background-image: url('camera.jpg');
+		background-size: cover;
+		background-position: center center;
+	}
+
+	body{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+		"kop kop"
+		"t1 t2"
+		"t3 t4"
+		"afb t5"
+		"afb t6"
+		"t7 aside"
+		"t8 aside"
+		"t9 aside"
+		"t10 aside"
+		"voet voet";
+	}
+	header {
+		grid-area: kop;
+	}
+	.kijkenvoelbewust {
+		grid-area: t1;
+	}
+	.verbind {
+		grid-area: t2;
+	}
+	.definitie {
+		grid-area: t3;
+	}
+	.compositie {
+		grid-area: t4;
+	}
+	.afb {
+		grid-area: afb;
+	}
+	.wisselaf {
+		grid-area: t5;
+	}
+	.ingewikkeld {
+		grid-area: t6;
+	}
+	.goedefoto {
+		grid-area: t7;
+	}
+	.witbalans {
+		grid-area: t8;
+	}
+	.licht {
+		grid-area: t9;
+	}
+	.isowaarde {
+		grid-area: t10;
+	}
+	aside {
+		grid-area: aside;
+	}
+	footer {
+		grid-area: voet;
+	}
+
+	.kijkenvoelbewust_article {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.kijkenvoelbewust_article h3 {
+		grid-column: span 2;
+	}
+	footer {
+		display: grid;
+		grid-template-columns: 1fr auto;
+
+	}
+	h1 {
+		font-size: 2.6em;
+	}
+
+}
+@media screen and (min-width:1000px) {
+		body {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+		"kop kop kop"
+		"t1 t2 t7"
+		"t3 t4 t8"
+		"t5 t6 t9"
+		"aside afb t10"
+		"aside afb t10" 
+		"voet voet voet";
+	}
+}
